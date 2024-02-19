@@ -39,11 +39,11 @@ public class AuthController {
                 ))
         );
     }
-    @PostMapping("/signup")
-    public ResponseEntity<UserDetails> signup(@RequestBody SignupRequest signupRequest) {
-        return ResponseEntity.ok(
-//                jwtService.createToken(authentication.getName())
-                userDetailsService.create(signupRequest) //pasar por mapper
-        );
-    }
+//    @PostMapping("/signup")
+//    public ResponseEntity<UserDetails> signup(@RequestBody SignupRequest signupRequest) {
+//        return ResponseEntity.ok(
+////                jwtService.createToken(authentication.getName())
+//                userDetailsService.create(signupRequest) //pasar por mapper
+//        );
+//    }
 }

@@ -3,6 +3,7 @@ package com.example.videogames.services;
 import com.example.videogames.models.Category;
 import com.example.videogames.models.Product;
 import com.example.videogames.models.user.User;
+import com.example.videogames.repositories.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import net.datafaker.Faker;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,9 @@ public class InitialDataCreationService {
     private final ProductService productService;
     private final UserDetailsServiceImpl userDetailsService;
     private final Faker faker = new Faker(new Locale("en-US"));
+    private final CategoryRepository categoryRepository;
+
+
 
     public void createDefaultAdminUser() {
         User user = new User("user", "$2a$12$K4tojeaYWMK55KzWzDWtLOuuUjRTkycWhSGHYWA2LXMZqmZUtuXPO"); // Esto es "password" codificado con bcrypt)
@@ -37,10 +41,10 @@ public class InitialDataCreationService {
                     faker.bool().bool(),
                     listaProducts
             );
-
+            productService.saveAll(listaProducts);
+            categoryRepository.save(category);
         }
-        productService.saveAll(listaProducts);
-        categoryService.save(category);
+
     }
 
     public List<Product> createFakeProducts(int number) {
