@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -19,7 +20,7 @@ public class Product {
     private UUID uuid;
     private String name;
     private String platform;
-    private Date launch;
+    private LocalDateTime launch;
     private Integer rating;
     private String description;
     private Double price;
