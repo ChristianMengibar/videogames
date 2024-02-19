@@ -8,7 +8,7 @@ INSERT INTO category (uuid, category_name, multiplayer)
 VALUES (uuid(), 'Adventures', 'No');
 
 INSERT INTO product (uuid, name, platform, launch , rating, description, price)
-VALUES (uuid(), 'Fortnite', 'Multiplataforma', '21 Julio 2017', 74, 'Es un shooter gratuito', 'Free');
+VALUES (uuid(), 'Fortnite', 'Multiplataforma', '21 Julio 2017', 74, 'Es un shooter gratuito', 0.00);
 
 INSERT INTO product (uuid, name, platform, launch , rating, description, price)
 VALUES (uuid(), 'EA FC 24', 'Multiplataforma', '29 Septiembre 2023', 78, 'Juego de futbol de toda la vida', 79.99);
