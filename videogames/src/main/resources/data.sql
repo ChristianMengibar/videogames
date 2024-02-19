@@ -17,4 +17,4 @@ INSERT INTO product (uuid, name, platform, launch , rating, description, price)
 VALUES (uuid(), 'God Of War Ragnarok', 'Multiplataforma', '9 Noviembre 2022', 98, 'Juego de aventuras', 79.99);
 
 INSERT INTO user_ (email, password)
-VALUES ('user', 'a')
+VALUES ('user', 'a');
